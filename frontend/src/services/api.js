@@ -32,11 +32,15 @@ api.interceptors.response.use(
   (error) => {
     if (error.response && error.response.status === 401) {
       // If unauthorized (expired token), clear local storage and redirect to login
-      const isAuthRoute = window.location.pathname.startsWith('/login') || window.location.pathname.startsWith('/register');
+      const isAuthRoute = 
+        window.location.hash.startsWith('#/login') || 
+        window.location.hash.startsWith('#/register') || 
+        window.location.pathname.startsWith('/login') || 
+        window.location.pathname.startsWith('/register');
       if (!isAuthRoute) {
         localStorage.removeItem('library_token');
         localStorage.removeItem('library_user');
-        window.location.href = '/login?expired=true';
+        window.location.hash = '/login?expired=true';
       }
     }
     return Promise.reject(error);
