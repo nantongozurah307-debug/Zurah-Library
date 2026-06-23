@@ -1,4 +1,4 @@
-# Bibliotech - Public Library circulation & overdue tracker
+ # Bibliotech - Public Library circulation & overdue tracker
 
 A premium, data-driven MVC web application designed to track book borrowings, manage circulation loops (borrowing, renewals, returns), calculate overdue flags, and track outstanding fine ledgers in Ugandan Shillings (UGX). Built with a Flask backend, SQLAlchemy ORM (SQLite3), and a modern React frontend utilizing Tailwind CSS and Recharts visualizations.
 
