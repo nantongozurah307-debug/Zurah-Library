@@ -5,3 +5,4 @@ Flask-Cors==4.0.1
 python-dotenv==1.0.1
 Werkzeug==3.0.3
 Flask-APScheduler==1.13.1
+gunicorn==22.0.0

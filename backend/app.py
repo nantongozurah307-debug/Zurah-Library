@@ -1,4 +1,9 @@
 import os
+import sys
+
+# Ensure backend package is in the system path for imports
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from flask import Flask, jsonify
 from flask_cors import CORS
 from flask_jwt_extended import JWTManager

@@ -1,4 +1,10 @@
+import os
+import sys
 from datetime import datetime, date, timedelta
+
+# Ensure backend package is in system path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from backend.app import app
 from backend.models import db, User, Book, BorrowRecord, Fine
 
